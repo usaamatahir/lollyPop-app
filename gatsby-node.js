@@ -3,8 +3,8 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const result = await graphql(`
-    {
-      LOLLIES {
+    query MyQuery {
+      Lollies {
         getLollies {
           id
           colorTop
@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   console.log(result);
-  result.data.LOLLIES.getLollies.map((data) => {
+  result.data.Lollies.getLollies.map((data) => {
     createPage({
       path: `${data.lollyPath}`,
       component: path.resolve("./src/Template/Template.tsx"),
