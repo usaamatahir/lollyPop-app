@@ -4,7 +4,7 @@ import ColorPicker from "../components/CreateLolly/ColorPicker";
 import Details from "../components/CreateLolly/Details";
 import LollyInfo from "../components/CreateLolly/LollyInfo";
 import Lolly from "../components/Lolly";
-import { nanoid } from "nanoid";
+import "../styles/main.css";
 
 const ADD_LOLLY = gql`
   mutation addLolly(
