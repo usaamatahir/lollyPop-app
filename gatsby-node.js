@@ -18,7 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   console.log(result);
-  result.data.getLollies.map((data) => {
+  result.data.Lollies.getLollies.map((data) => {
     createPage({
       path: `${data.lollyPath}`,
       component: path.resolve("./src/Template/Template.tsx"),
