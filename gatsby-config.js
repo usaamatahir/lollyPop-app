@@ -8,7 +8,7 @@ module.exports = {
         // This is the field under which it's accessible
         fieldName: `LOLLIES`,
         // URL to query from
-        url: `/.netlify/functions/LollyPop`,
+        url: `https://virtual-loly-with-gatsby.netlify.app/.netlify/functions/LollyPop`,
 
         refetchInterval: 60,
       },
