@@ -11,7 +11,7 @@ const LollyInfo: FC<Props> = ({ recipient, message, sender, lollyPath }) => {
   return (
     <div className="info">
       <p className="share">Your lolly is freezing. Share it with this link: </p>
-      <pre>{`http://localhost:8888/${lollyPath}`}</pre>
+      <pre>{`${location.origin}/${lollyPath}`}</pre>
       <p></p>
       <div className="details">
         <p id="recipient" className="recipient">
