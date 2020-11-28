@@ -80,6 +80,7 @@ const createLolly = () => {
           message={message}
           sender={sender}
           lollyPath={link}
+          setSubmission={setSubmission}
         />
       ) : (
         <>

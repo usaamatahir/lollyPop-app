@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React, { FC } from "react";
 
 type Props = {
@@ -5,9 +6,16 @@ type Props = {
   message: string;
   sender: string;
   lollyPath: string;
+  setSubmission: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const LollyInfo: FC<Props> = ({ recipient, message, sender, lollyPath }) => {
+const LollyInfo: FC<Props> = ({
+  recipient,
+  message,
+  sender,
+  lollyPath,
+  setSubmission,
+}) => {
   return (
     <div className="info">
       <p className="share">Your lolly is freezing. Share it with this link: </p>
@@ -26,8 +34,11 @@ const LollyInfo: FC<Props> = ({ recipient, message, sender, lollyPath }) => {
       </div>
       <p className="bytheway">
         {sender} made this virtual lollipop for you. You can{" "}
-        <a href="/create">make your own</a> to send to a friend who deserve some
-        sugary treat which won't rot their teeth...
+        <Link to="/createLolly" onClick={() => setSubmission(false)}>
+          make your own
+        </Link>{" "}
+        to send to a friend who deserve some sugary treat which won't rot their
+        teeth...
       </p>
     </div>
   );
